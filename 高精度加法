@@ -1,0 +1,43 @@
+# include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int c[1001];
+   int a[1001];
+   int b[1001];
+   int l1,l2;
+   char s1[1001];
+   char s2[1001];
+   cin>>s1;
+   cin>>s2;
+   l1=strlen(s1);
+   l2=strlen(s2);
+//输入模块，计算长度。
+   for(int i=0;i<l1;i++)
+   {
+       a[l1-i]=s1[i]-'0';
+   }
+   for(int i=0;i<l2;i++)
+   {
+       b[l2-i]=s2[i]-'0';
+   }
+//存储模块，并转置（位数可能不一致），所以从最后面开始算。
+   int time;
+   time= max(l1,l2)+1;
+//以较长的为准开始从后往前计算。
+   for(int i=1;i<=time;i++)
+   {
+       c[i]+=a[i]+b[i];
+       c[i+1]=c[i]/10;
+       c[i]=c[i]%10;
+   }
+//核心算法
+   if(c[time]==0&&time>0)
+       time--;
+   for (int i=time;i>0;i--)
+   {
+       cout<<c[i];
+   }
+//输出模块
+    return 0;
+}
