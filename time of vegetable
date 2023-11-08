@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int hh,mm,hh1,mm1,h,m;char a,b;
+    cin>>hh>>a>>mm>>hh1>>b>>mm1;
+    h=hh+hh1;m=mm+mm1;
+    if(h>=24){
+        h=h%24;
+    }if(m>=60){
+        m=m%60;
+    }if(h<10&&m>=10){cout<<"0"<<h<<":"<<m<<endl;}
+    if(h<10&&m<10){cout<<"0"<<h<<":"<<"0"<<m<<endl;}
+    if(h>=10&&m<10){cout<<h<<":"<<"0"<<m<<endl;}
+    if(h>=10&&m>=10){cout<<h<<":"<<m<<endl;}
+}
