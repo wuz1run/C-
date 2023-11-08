@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace  std;
+int main()
+{
+    string words[]={"Doc","Bashful","Sleepy","Sneezy","Happy","Dopey","Grumpy"};
+    int n;
+    while(scanf("%d",&n)!=EOF)
+    {
+        if(n%10-1>7||n%10==0)
+        {
+            cout<<"Circle dance";
+        }
+        else{cout<<words[n%10-1];}
+    }
+ 
+ 
+ 
+ 
+ 
+}
