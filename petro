@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace  std;
+int main()
+{
+double amount,A,B,C;
+cin>>amount>>A>>B>>C;
+double mini=A;
+mini=min(A,B);
+mini=min(mini,C);
+if(mini==A)
+    cout<<"A ";
+if(mini==B)
+    cout<<"B ";
+if(mini==C)
+    cout<<"C ";
+cout<<amount*mini;
+
+
+}
