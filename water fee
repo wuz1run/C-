@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace  std;
+int main()
+{
+        double m, n;
+        cin>>n;
+        if(n<0)
+        {cout<<"0.00";
+        return 0;}
+        if(n<7)
+        {m=n*(1.2);}
+         if(n>=7)
+        {m=n*1.9;}
+         printf("%.2lf",m);
+
+
+}
