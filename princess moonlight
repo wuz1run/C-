@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace  std;
+int main()
+{
+        int hp1,atk1,hp2,atk2,count;
+        cin>>hp1>>atk1>>hp2>>atk2;
+        count=ceil(hp1/atk2);
+        if(ceil(hp1/atk2)<ceil(hp2/atk1)+1)
+            cout<<count;
+
+        else
+            cout<<"Sorry,Miss Moonlight";
+
+
+
+}
