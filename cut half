@@ -1,0 +1,37 @@
+#include "bits/stdc++.h"
+using namespace std;
+bool is_string(string a)
+{
+    int count=0;
+    for(int i=0;i<a.size()/2;i++)
+    {
+        if(a.at(a.size()-i-1)==a.at(i))
+        {
+            count++;
+        }
+    }
+    return count==a.size()/2;
+}
+    void cut(string &a)
+    {
+        string ss;
+        for(int i=0;i<a.size()/2;i++)
+        {
+            ss.push_back(a[i]);
+        }
+       a=ss;
+    }
+int main() {
+    string ss;
+    while(getline(cin,ss))
+    {if(ss.size()%2!=0) {
+        cout << ss;
+        return 0;
+    }
+while(is_string(ss)&&ss.size()%2==0)
+{
+    cut(ss);
+}
+    cout<<ss;}
+
+}
